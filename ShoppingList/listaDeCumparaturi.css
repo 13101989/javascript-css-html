@@ -1,0 +1,55 @@
+		body {
+			background-color: #e5c3e5;
+		}
+
+		fieldset {	
+			border: 0px solid black;
+			border-radius: 15px;
+			background-color: white;
+			position: absolute;
+			left:250px;
+			right: 250px;
+			top: 50px;
+			padding-left: 250px;
+			padding-right: 250px;
+		}
+
+		#additem{
+			background-color: #54f999;
+			height: 40px;
+			border-radius: 5px;
+			width: 90px;
+
+		}
+
+		#item{
+			width: 250px;
+			height: 40px;
+			padding-left: 7px;
+		}
+
+		#sortAsc{
+			background-color: #f475f4;
+			border-radius: 5px;
+		}
+
+		#sortDesc{
+			background-color: #f475f4;
+			border-radius: 5px;
+		}
+
+		#tabel{
+			width: 350px;
+			font-size: 18px;
+		}
+
+		thead{
+			font-weight: bold;
+			
+		}
+
+		.markAsBuyed {
+			background-color: #f47a88;
+			border-radius: 5px;
+			font-size: 15px;
+		}

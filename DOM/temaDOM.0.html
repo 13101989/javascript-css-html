@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Tema DOM.0</title>
+		<style>
+		body{
+			background-image: url("universitate6.jpg"), url("universitate.jpg"), url("universitate3.jpg"), url("universitate2.jpg"), url("universitate4.jpg"), url("universitate5.jpg"), url("mat.jpg");
+			background-position: 340px 430px, 30px 40px , 655px 245px, 20px 360px, 710px 30px, 1000px 0px, 0px 0px  ;
+			background-size: 300px 200px, 550px 300px, 650px 370px, 300px 200px, 300px 200px, 300px 200px, 1370px 700px;
+			background-repeat: no-repeat;
+		}
+			fieldset{
+				width: 400px;
+				position: relative;
+				margin-left: 470px;
+				margin-right: 470px;
+				display: block;
+				background-color: white;
+				opacity: 0.9;
+			}
+
+			legend {
+				padding-top: 20px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<form method="post">
+			<fieldset>
+				<legend><h3>Date de inregistrare</h3></legend>
+				<label for="nume">Nume</label>
+				<input type="text" id="nume" /><br /><br />
+				<label for="prenume">Prenume</label>
+				<input type="text" id="prenume" /><br /><br />
+				<label for="taraDeOrigine">Tara de origine</label>
+				<input type="text" id="taraDeOrigine" /><br /><br />
+				<label for="varsta">Varsta (in momentul aplicarii)</label>
+				<select id="varsta">
+					<option></option>
+					<option>Sub 18</option>
+					<option>18-25</option>
+					<option>25-30</option>
+					<option>30-35</option>
+					<option>Peste 35</option>
+				</select><br /><br />
+				<label for="studii">Nivel studii</label>
+				<select id="studii">
+					<option></option>
+					<option>Scoala profesionala</option>
+					<option>Licenta</option>
+					<option>Masterat</option>
+					<option>Nici unul</option>
+				</select><br /><br />
+				<label for="relocare">Sunt de acord cu relocarea pe perioada studiilor.</label>
+				<input type="checkbox" id="relocare" /><br />
+				<label for="termeniSiConditii">Confirm ca am citit termenii si conditiile.</label>
+				<input type="checkbox" id="termeniSiConditii" /><br />
+				<label for="pasaport">Confirm ca sunt eligibil sa calatoresc in Franta (detin pasaport sau sunt cetatean al UE).</label>
+				<input type="checkbox" id="pasaport" /><br />
+				<p>Studiile pentru care aplic:</p>
+				<label for="licenta">Licenta</label>
+				<input type="radio" id="licenta" name="studii" />
+				<label for="masterat">Masterat</label>
+				<input type="radio" id="masterat" name="studii" /><br />
+				<p>Sunt la prima experienta de studiu in afara tarii:</p>
+				<label for="da">Da</label>
+				<input type="radio" id="da" name="experienta" />
+				<label for="nu">Nu</label>
+				<input type="radio" id="nu" name="experienta" /><br />
+				<p>Am nevoie de asistenta pentru relocare:</p>
+				<label for="da1">Da</label>
+				<input type="radio" id="da1" name="asistenta" />
+				<label for="nu1">Nu</label>
+				<input type="radio" id="nu1" name="asistenta" /><br /><br /><br />
+				<input type="submit" id="salveaza" value="Trimite formular" />
+			</fieldset>
+		</form>
+	</body>
+</html>

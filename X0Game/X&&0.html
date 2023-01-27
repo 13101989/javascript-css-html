@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+		Tema!!!
+		</title>
+                <style>
+                img{
+                        width: 100px;
+                        height:100px;
+                }
+                table{
+                        border-collapse:collapse;
+                }
+
+                 </style>
+
+                 <script>
+
+                        var player = "x";
+
+                        function schimbaImaginea (imagine, e){
+
+                        	var winner= document.getElementById ("winner");
+                        	var A1=document.getElementById ("A1");
+                        	var A2=document.getElementById ("A2");
+                        	var A3=document.getElementById ("A3");
+                        	var B1=document.getElementById ("B1");
+                        	var B2=document.getElementById ("B2");
+                        	var B3=document.getElementById ("B3");
+                        	var C1=document.getElementById ("C1");
+                        	var C2=document.getElementById ("C2");
+                        	var C3=document.getElementById ("C3");
+
+
+                        	if (imagine.src !== "http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg") {
+
+                        	}else if (player === "x"){
+                        		imagine.src="http://www.drodd.com/images14/x12.jpg";
+                        		player="0";
+                        	}else if (player === "0"){
+                        		imagine.src="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg";
+                        		player="x";
+                        	}
+
+                            
+                        	
+                           if ((A1.src==="http://www.drodd.com/images14/x12.jpg" && A2.src==="http://www.drodd.com/images14/x12.jpg" && A3.src==="http://www.drodd.com/images14/x12.jpg") ||
+                              (B1.src==="http://www.drodd.com/images14/x12.jpg" && B2.src==="http://www.drodd.com/images14/x12.jpg" && B3.src==="http://www.drodd.com/images14/x12.jpg") ||
+                               (C1.src==="http://www.drodd.com/images14/x12.jpg" && C2.src==="http://www.drodd.com/images14/x12.jpg" && C3.src==="http://www.drodd.com/images14/x12.jpg") ||
+                                (A1.src==="http://www.drodd.com/images14/x12.jpg" && B1.src==="http://www.drodd.com/images14/x12.jpg" && C1.src==="http://www.drodd.com/images14/x12.jpg") ||
+                                 (A2.src==="http://www.drodd.com/images14/x12.jpg" && B2.src==="http://www.drodd.com/images14/x12.jpg" && C2.src==="http://www.drodd.com/images14/x12.jpg") ||
+                                  (A3.src==="http://www.drodd.com/images14/x12.jpg" && B3.src==="http://www.drodd.com/images14/x12.jpg" && C3.src==="http://www.drodd.com/images14/x12.jpg") ||
+                                   (A1.src==="http://www.drodd.com/images14/x12.jpg" && B2.src==="http://www.drodd.com/images14/x12.jpg" && C3.src==="http://www.drodd.com/images14/x12.jpg") ||
+                                    (A3.src==="http://www.drodd.com/images14/x12.jpg" && B2.src==="http://www.drodd.com/images14/x12.jpg" && C1.src==="http://www.drodd.com/images14/x12.jpg")) {
+
+
+
+                           	winner.innerHTML="'X' a castigat";
+                           	winner.style.fontSize="150px";
+                                
+
+                       } else if ((A1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && A2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && A3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg") ||
+                        (B1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && B2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && B3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg") ||
+                         (C1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && C2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && C3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg") ||
+                          (A1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && B1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && C1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg") ||
+                           (A2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && B2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && C2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg") ||
+                            (A3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && B3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && C3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg") ||
+                             (A1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && B2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && C3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg") ||
+                              (A3.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && B2.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg" && C1.src==="https://image.freepik.com/free-photo/red-number-zero_1232-677.jpg")) {
+
+                           	winner.innerHTML="'0' a castigat";
+                           	winner.style.fontSize="150px"; 
+                       }}
+
+                 </script>
+                
+                
+	</head>
+	<body>
+		<table border="1" id="table" >
+        	<tr>
+        		<td id="td1"><img id="A1" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+        		<td><img id="A2" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+        		<td><img id="A3" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+        	</tr>
+        	<tr>
+        		<td><img id="B1" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+                <td><img id="B2" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+                <td><img id="B3" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+        	</tr>
+                <td><img id="C1" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+                <td><img id="C2" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+                <td><img id="C3" class="imagini" onclick="schimbaImaginea(this,event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+                </tr>
+		</table>
+		<div id="winner"></div>
+	</body>
+</html>
+

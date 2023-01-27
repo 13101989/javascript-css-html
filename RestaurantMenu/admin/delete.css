@@ -1,0 +1,36 @@
+ 				body {
+
+ 					background-color: #60f2ef;
+ 					padding-left: 20px;
+ 				}
+
+ 				h2{
+ 					padding-left: 10px;
+ 				}
+
+
+ 				#tabel1{
+ 					width: 1175px;
+ 				}
+
+ 				#contact2{
+ 					background-color: #6b89f4;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 30px;
+ 					width: 120px;
+ 					outline: none;
+ 				}
+
+ 				#contact1{
+ 					background-color: #ff0000;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 30px;
+ 					width: 120px;
+ 					outline: none;
+ 				}
+
+ 				#qwerty {
+ 					color: #933993;
+ 				}

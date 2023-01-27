@@ -1,0 +1,39 @@
+				body {
+
+ 					background-color: #60f2ef;
+ 					padding-left: 20px;
+
+ 				}h2{
+ 					padding-left: 10px;
+ 				}
+
+
+ 				#tdContact{
+ 					text-align:right;
+ 				}
+
+ 				#tabel1{
+ 					width: 1175px;
+ 				}
+
+ 				#contact{
+ 					background-color: #6b89f4;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 35px;
+ 					outline: none;
+ 				}
+
+ 				#detalii{
+ 					background-color: #fc5367;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 35px;
+ 					outline: none;
+ 				}
+
+ 				#map {
+        			height: 300px;
+        			width: 88%;
+       			}
+

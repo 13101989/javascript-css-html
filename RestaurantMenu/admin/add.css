@@ -1,0 +1,38 @@
+ 				body {
+
+ 					background-color: #60f2ef;
+ 					padding-left: 20px;
+ 				}
+
+ 				h2{
+ 					padding-left: 10px;
+ 				}
+
+ 				#tdContact{
+ 					text-align:right;
+ 				}
+
+ 				#tabel1{
+ 					width: 1175px;
+ 				}
+
+ 				#contact2{
+ 					background-color: #6b89f4;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 30px;
+ 					width: 120px;
+ 					outline: none;
+ 				}
+
+ 				.area {
+ 					height: 20px;
+ 					width: 500px;
+
+ 				}
+
+ 				.area2 {
+ 					width: 500px;
+ 				}
+
+

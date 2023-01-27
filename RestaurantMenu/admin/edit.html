@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+ 	<html>
+ 		<head>
+ 			<title>Adauga produs</title>
+			<link rel="stylesheet" type="text/css" href="edit.css">
+			<script src="edit.js"></script>
+		</head>
+		 <body onload="edit()">
+		 	<table id="tabel1">
+		 		<tr>
+		 			<td><h1>Cald si bun (Admin)</h1></td>
+		 		</tr>
+		 	</table>
+		 	<form onsubmit="salveazaPreparat (this, event);" class="form">
+		 		<label for="nume">Nume:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 		<input type="text" id="nume" name="nume" class="area" /><br /><br />
+		 		<label for="URL">URL imagine:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 		<input type="text" id="URL" name="URL" class="area" /><br /><br />
+		 		<span>Ingrediente:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		 		<textarea rows="2" class="area2" id="ingrediente" name="ingrediente"></textarea><br /><br />
+		 		<span>Mod de preparare:</span>&nbsp;&nbsp;
+		 		<textarea rows="2" class="area2" id="reteta" name="reteta"></textarea><br /><br />
+		 		<input type="submit" id="contact2" value="Salveaza preparat" />
+		 	</form>
+ 		</body>
+	 </html>

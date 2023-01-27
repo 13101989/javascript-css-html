@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SuNeTlaPatrat</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+
+
+			body{
+				background-color: #000000;
+				margin: 0px;
+				padding: 0px;
+			}
+
+			.wrapper {
+				  margin:0 auto;
+				  max-width: 1349px;
+				  justify-content: center;  
+				}
+
+			.top{
+				display: none;
+				grid-template-columns: 1349px;
+				grid-template-rows: 150px;
+				text-align: center;
+				background-color: #ffffff;
+				position: fixed;
+
+			}
+
+
+			.grid-item1 {
+				text-align:left;
+				border-right: none;
+				position: fixed;
+				z-index: 8;
+			}
+
+			.grid-item2 {
+				text-align:left;
+				border-right: none;
+				border-left: none;
+				position: fixed;
+				margin-left: 435px;
+				z-index: 2;
+			}
+
+			.grid-item3 {
+				border-left: none;
+				position: fixed;
+				z-index:1;
+				
+			}
+
+			.grid-item4 {
+				border-left: none;
+				position: fixed;
+				margin-left: 1100px;
+				margin-top: 100px;
+				z-index:4;
+			}
+
+			.i{
+				width: 30px;
+				height: 30px;
+				cursor:pointer;
+				
+			}
+
+
+			#sunet {
+				position: absolute;
+				width: 240px;
+				height: 130px;
+				margin-left: 115px;
+				margin-top: 1px;
+				
+			}
+
+			#unde {
+				position: absolute;
+				width: 150px;
+				height: 110px;
+				padding-left: 130px;
+				padding-top: 15px;
+
+			}
+
+			#carucior {
+				position: absolute;
+				width: 65px;
+				height: 60px;
+				margin-left: 1250px;
+				margin-top: 35px;
+				z-index:-1;
+
+			}
+
+
+			#numarProduse {
+				background-color: #ffbffb;
+				width: 27px;
+				height: 31px;
+				margin-left: 1277px;
+				margin-top: 29px;
+				z-index:2;
+				text-align: center;
+				border-radius:10px;
+				font-weight: bold;
+				font-size: 21px;
+				visibility: hidden;
+				outline: none;
+				cursor: pointer;
+			}
+
+			.grid-container{
+				display: none;
+				grid-template-columns: 370px 370px 370px;
+				grid-auto-rows: 420px;
+				text-align: center;
+				background-color: #000000;
+				padding-top: 150px;
+				justify-content: center;
+				z-index:3;
+
+				}
+
+				#bandaCos {
+					position: fixed;
+					margin-top: 0px;
+					display: none;
+					color: #ffffff;
+					background-color: #000000;
+					font-family: "Comic Sans MS", cursive, sans-serif;
+					text-align: center;
+					padding-top: 5px;
+					height: 30px;
+					border-bottom: 1px solid black;
+					width: 1389px;
+					box-shadow: 3px 5px 11px #000;
+					z-index:4;
+				}
+
+						@media only screen and (max-width: 425px) {
+
+
+							html{
+								background-color: #000000;
+							}
+							body{
+								background-color: #000000;
+								margin: 0px;
+								
+								
+							}
+
+							.wrapper {
+								  margin:0px;
+								  max-width: 425px;  
+								  text-align: center;
+								
+								}
+
+						    .grid-container{
+								display: none;
+								grid-template-columns: 325px;
+								grid-auto-rows: 420px;
+								text-align: center;
+								background-color: #000000;
+								padding-top: 95px;
+								justify-content: left;
+								z-index:-1;		
+							}
+
+							.grid-container .grid-item {
+								width: 375px;
+				  				margin-left:-26px;
+				  				border-left: 2px solid black;
+				  				transform: scaleX(0.90);
+
+							}
+
+							.casti {
+									width: 280px;
+									height: 350px;
+
+								}
+
+							.top{
+								display: none;
+								grid-template-columns: 320px;
+								grid-template-rows: 95px;
+								text-align: center;
+								background-color: #ffffff;
+								position:fixed;
+								z-index:3;
+								border-bottom:7px solid black;
+							}
+
+							.grid-item {
+								background-color: #000000;
+								border: 1px solid black;	
+
+							}
+
+							.grid-item1 {
+							
+							}
+
+							.grid-item2 {
+								border-right: none;
+								border-left: none;
+								padding-bottom: 0px;
+								margin-top:5px;
+								margin-left: -90px;
+								padding-left:0px;
+								
+							}
+
+							.grid-item3 {
+								border-left: none;	
+								margin-left:200px;
+								margin-top:4px;	
+							}
+
+							.grid-item4 {
+								margin-top:-95px;
+								background-color: black;
+								margin-left:200px;
+								transform: scale(0.7);
+								
+	
+							}
+
+							
+
+								.i{
+									border:1px solid white;
+								}
+
+
+								#sunet {
+									position: absolute;
+									width: 160px;
+									height:88px;
+									padding-top: 0px;
+
+								}
+
+								#unde {
+									display:none;
+
+								}
+
+								#carucior {
+									position: absolute;
+									width: 18px;
+									height: 13px;
+									padding-bottom: 25px;
+									padding-left:25px;
+									transform: scale(0.7);
+									margin-top:30px;
+									z-index:-1;
+									background-color: white;
+									margin-left: -1242px; 
+
+								}
+
+								
+
+								#numarProduse {
+									background-color: #ffbffb;
+									width: 19px;
+									height: 14px;
+									margin-left: -1202px; 
+									margin-top:33px;
+									z-index:2;
+									text-align: center;
+									border-radius:6px;
+									font-weight: bold;
+									font-size: 17px;
+									visibility: hidden;
+									outline: none;
+									position:relative;
+									padding:3px;
+									border: 2px solid black;
+								}
+
+								
+
+								#bandaCos {
+									position: fixed;
+									margin-top: 0px;
+									display: none;
+									color: #ffffff;
+									background-color: #000000;
+									text-align: center;
+									padding-top: 2px;
+									height: 52px;
+									border-bottom: 1px solid black;
+									width: 316px;
+									box-shadow: 3px 5px 11px #000;
+									z-index:4;
+									font-family: "Lucida Console", Monaco, monospace;
+									margin-left:1px;
+									margin-right:3px;
+								}
+
+								.admin .fas {
+									display:none;
+								}
+
+								.admin{
+									display:none;
+									}
+
+								.pret{
+									color: black;
+									font-weight: 900;
+									font-size: 32px;
+									background-color: white;
+									font-family: "Lucida Console", Monaco, monospace;
+								}
+							}
+			
+			.grid-container .grid-item {
+				width: 370px;
+  				float: left;
+			}
+
+
+			.grid-item {
+				background-color: #000000;
+				border: 1px solid black;		
+			}
+
+			.casti {
+				width: 368px;
+				height: 418px;
+			}	
+
+			.grid-item:hover img{
+				opacity: 1;
+				transform: scale(0.87);
+				box-shadow: 1px 1px;		
+			}
+
+			.grid-item:hover .centru {
+				visibility: visible;	
+			}
+
+			.grid-item:hover .price {
+				visibility: visible;		
+			}
+
+			.centru {
+				  position: relative;
+				  bottom: 23%;
+				  left: 32%;
+				  transform: translate(-50%, -50%);
+				  -ms-transform: translate(-50%, -50%);
+				  text-align: center;
+				  visibility: hidden;
+				}
+
+			.text {
+				  padding: 5px 5px;
+				  width: 40px;
+				  height: 60px;
+				  background-color: white;
+				  border: 0.5px solid black;
+				}
+
+			
+			.text:hover {
+				  cursor: pointer;
+				  border: 2px solid black;
+				}
+
+			.detalii {
+				  background-color: #ffffff;
+				  color: black;
+				  border: 3px solid black;
+				  font-weight: 900;
+				  font-size: 18px;
+				  padding: 7px 7px;
+
+				}
+
+			.descriere {
+				  background-color: #000000;
+				  color: white;
+				  font-size: 18px;
+				  padding: 5px 5px;
+
+				}	
+
+			.detalii:hover {
+				background: #000000;
+				color: #ffffff;
+				cursor: pointer;
+				}	
+			
+			.price {
+				  visibility: hidden;
+				  position: relative;
+				  bottom: 45%;
+				  left: 80%;
+				  transform: translate(-50%, -50%);
+				  -ms-transform: translate(-50%, -50%);
+				  text-align: center;
+				}
+
+				.pret{
+					color: black;
+					font-weight: 900;
+					font-size: 32px;
+					font-family: "Lucida Console", Monaco, monospace;
+					background-color: white;
+				}
+
+
+				a {
+				text-decoration: none;
+				color: inherit;
+			}
+
+			.admin {
+				background-color: white;
+				display: block;
+				border: 2px solid black;
+				font-weight: bold;
+				margin-left: 1300px;
+				margin-top: 2px;
+				font-family: "Comic Sans MS", cursive, sans-serif;
+
+
+			}
+
+			.admin:hover {
+				background-color: black;
+				color: white;
+				cursor: pointer;
+			}
+
+.container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.item-1 {
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-2 {
+  background-color: #000000;
+  top: 0;
+  right: 0;
+  animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-3 {
+  background-color: #ffffff;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-4 {
+  background-color: #000000;
+  bottom: 0;
+  left: 0;
+  animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+@keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 100px)} 
+  50% {transform: translate(100px, 100px)} 
+  75% {transform: translate(100px, 0)} 
+}
+
+@keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-100px, 0)} 
+  50% {transform: translate(-100px, 100px)} 
+  75% {transform: translate(0, 100px)} 
+}
+
+@keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -100px)} 
+  50% {transform: translate(-100px, -100px)} 
+  75% {transform: translate(-100px, 0)} 
+}
+
+@keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(100px, 0)} 
+  50% {transform: translate(100px, -100px)} 
+  75% {transform: translate(0, -100px)} 
+}
+
+		
+
+		</style>
+
+		<script>
+
+			var indexModificat=-1;
+
+			setTimeout(function deseneazaGrid() {
+
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+									
+				listaProduse= JSON.parse(this.responseText);
+				console.log(listaProduse);
+									
+				var grid=document.querySelector(".grid-container");
+
+				var str="";
+
+				for(var i in listaProduse){
+
+					var rand = `<div class="grid-item">
+									<img class="casti" id="${i}A" src="${listaProduse[i].imagine}" />
+									<div class="centru">
+										<a href="details.html?id=${i}"><span class="detalii">Detalii</span><br /><br /></a>
+										<span class="descriere" id="${i}B">${listaProduse[i].nume}</span><br /><br />
+										<span class="text" onclick="adauga('${i}')"><i class="fas fa-shopping-cart fa-lg"></i></span>
+									</div>
+									<div class="price">
+										<span class="pret" id="${i}C">${listaProduse[i].pret}$</span>
+									</div>
+								</div>`
+
+					str+=rand;
+
+							}
+
+						console.log(str);
+						grid.innerHTML=str;
+					}
+				};
+
+					xhttp.open("GET", "https://proiect-ecommerce.firebaseio.com/.json", true);
+						document.querySelector(".container").style.display="none";
+						document.querySelector(".item").style.display="none";
+						document.querySelector(".item-1").style.display="none";
+						document.querySelector(".item-2").style.display="none";
+						document.querySelector(".item-3").style.display="none";
+						document.querySelector(".item-4").style.display="none";
+						document.querySelector(".top").style.display="grid";
+						document.querySelector(".grid-container").style.display="grid";
+					xhttp.send();
+
+				},2000)
+
+			function deseneazaGrid() {
+
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+									
+				listaProduse= JSON.parse(this.responseText);
+				console.log(listaProduse);
+									
+				var grid=document.querySelector(".grid-container");
+
+				var str="";
+
+				for(var i in listaProduse){
+
+					var rand = `<div class="grid-item">
+									<img class="casti" id="${i}A" src="${listaProduse[i].imagine}" />
+									<div class="centru">
+										<a href="details.html?id=${i}"><span class="detalii">Detalii</span><br /><br /></a>
+										<span class="descriere" id="${i}B">${listaProduse[i].nume}</span><br /><br />
+										<span class="text" onclick="adauga(${i})"><i class="fas fa-shopping-cart fa-lg"></i></span>
+									</div>
+									<div class="price">
+										<span class="pret" id="${i}C">${listaProduse[i].pret}$</span>
+									</div>
+								</div>`
+
+					str+=rand;
+
+							}
+
+						console.log(str);
+						grid.innerHTML=str;
+					}
+				};
+
+					xhttp.open("GET", "https://proiect-ecommerce.firebaseio.com/.json", true);
+					xhttp.send();
+
+				}
+
+				function cart() {
+
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+
+						listaProduse= JSON.parse(this.responseText);
+
+							var element_count = 0;
+
+						for(var i in listaProduse){
+						    if(listaProduse.hasOwnProperty(i)){
+						        element_count += Number(listaProduse[i].cantitate);
+						    }    
+						}
+
+						if (element_count != 0)	{
+
+				 		document.getElementById("numarProduse").style.visibility="visible";
+				 		document.getElementById("numarProduse").value=element_count;
+					}}
+
+				}
+				
+				xhttp.open("GET", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+				xhttp.send();
+
+				}
+
+			function adauga(index) {
+
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				   
+				   listaProduse = JSON.parse(this.responseText);
+					console.log(listaProduse);
+					cart();
+
+				}
+			}
+
+			xhttp.open("POST", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+			xhttp.send(JSON.stringify({
+					imagine: document.getElementById(""+index+"A").src,
+					produs: document.getElementById(""+index+"B").innerHTML,
+                    cantitate: 1,
+                    pret: document.getElementById(""+index+"C").innerHTML,
+                    index: index,
+				}));
+
+
+					document.getElementById("product").innerHTML = document.getElementById(""+index+"B").innerHTML;
+					document.getElementById("bandaCos").style.display = "block";
+
+
+					setTimeout(function revenire () {
+					document.getElementById("bandaCos").style.display = "none";
+				}, 2000);
+
+			}
+
+
+			function admin() {
+				window.location = "admin.html";
+			}
+
+			function openInNewTab(url) {
+			  var win = window.open(url, '_blank');
+			  win.focus();
+			}
+						
+
+		</script>
+
+	</head>
+	<body onload="deseneazaGrid(); cart()">
+	<div class="wrapper">
+		<div class="container">
+			  <div class="item item-1"></div>
+			  <div class="item item-2"></div>
+			  <div class="item item-3"></div>
+			  <div class="item item-4"></div>
+			</div>
+		<div class="top">
+			<div class="grid-item1"><img id="unde" src="wave.png" /></div>
+		 	<div class="grid-item2"><a href="proiect.html"><img id="sunet" src="sunet.jpg" /></a></div>
+		  	<div class="grid-item3">
+		  		<button class="admin" onclick="admin()"><i class="fas fa-lock"></i></button>
+		  		<a href="cos.html">
+		  			<i id="carucior" class="fas fa-shopping-cart fa-4x"></i>
+		  			<input type="text" id="numarProduse" value="0"></input>
+		  		</a>
+		  	</div><br /><br /><br /><br /><br />
+		  	<div class="grid-item4"><span onclick="openInNewTab('https://www.instagram.com/lendmeurears.au/');"><img class="i" src="fi-instagram.png" /></span>&nbsp;&nbsp;<span onclick="openInNewTab('https://www.facebook.com/lendmeurearsaustralia/')"><img class="i" src="fi-facebook.png" /></span>&nbsp;&nbsp;<span onclick="openInNewTab('https://twitter.com/hifiheadphones');"><img class="i" src="fi-tumblr.png" /></span></div>
+		</div>
+		<div id="bandaCos"><span id="product"></span> a fost adaugat cu succes in cosul tau de cumparaturi!</div>
+		<div class="grid-container">
+		</div>
+	</div>
+	</body>
+</html>

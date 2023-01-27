@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Tema DOM.3</title>
+		<style>
+		body{
+			background-image: url("universitate6.jpg"), url("universitate.jpg"), url("universitate3.jpg"), url("universitate2.jpg"), url("universitate4.jpg"), url("universitate5.jpg"), url("mat.jpg");
+			background-position: 340px 430px, 30px 40px , 655px 245px, 20px 360px, 710px 30px, 1000px 0px, 0px 0px  ;
+			background-size: 300px 200px, 550px 300px, 650px 370px, 300px 200px, 300px 200px, 300px 200px, 1370px 700px;
+			background-repeat: no-repeat;
+		}
+			fieldset{
+				width: 400px;
+				position: relative;
+				margin-left: 470px;
+				margin-right: 470px;
+				height: 615px;
+				display: block;
+				background-color: white;
+				opacity: 0.9;
+			}
+
+			legend {
+				padding-top: 20px;
+			}
+
+		</style>
+		<script>
+			function validare(formular, e) {
+				e.preventDefault();
+
+
+			var nume=document.getElementById("nume");
+			var prenume=document.getElementById("prenume");
+			var taraDeOrigine=document.getElementById("taraDeOrigine");
+
+			if(nume.value.length === prenume.value.length) {
+				nume.style.border="2px solid #19ff00";
+				prenume.style.border="2px solid #19ff00";
+				taraDeOrigine.value="equal";
+			}else { if(nume.value.length >= prenume.value.length) {
+				nume.style.border="2px solid #19ff00";
+				prenume.style.border="";
+				taraDeOrigine.value=nume.value;
+			}else { 
+				nume.style.border="";
+				prenume.style.border="2px solid #19ff00";
+				taraDeOrigine.value=prenume.value;
+					}				
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<form method="post" />
+			<fieldset>
+				<legend><h3>Date de inregistrare</h3></legend>
+				<label for="nume">Nume</label>
+				<input type="text" id="nume" onkeyup="validare(this,event);" /><br /><br />
+				<label for="prenume">Prenume</label>
+				<input type="text" id="prenume" onkeyup="validare(this,event);" /><br /><br />
+				<label for="taraDeOrigine">Tara de origine</label>
+				<input type="text" id="taraDeOrigine" onkeyup="validare(this,event);" /><br /><br />
+			</fieldset>
+		</form>
+	</body>
+</html>

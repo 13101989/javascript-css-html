@@ -1,0 +1,73 @@
+				body {
+
+ 					background-color: #60f2ef;
+ 					padding-left: 20px;
+
+ 				}h2{
+ 					padding-left: 10px;
+ 				}
+
+ 				#buton{
+ 					background-color: #dc9bf2;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 30px;
+ 					outline: none;
+ 				}
+
+ 				#cautaIngrediente{
+ 					height: 24px;
+ 					width: 250px;
+ 				}
+
+ 				#tdContact{
+ 					text-align:right;
+ 				}
+
+ 				#tabel1{
+ 					width: 1175px;
+ 				}
+
+ 				#contact{
+ 					background-color: #6b89f4;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 35px;
+ 					outline: none;
+ 				}
+
+ 				#detalii{
+ 					background-color: #fc5367;
+ 					color: #ffffff;
+ 					border-radius: 5px;
+ 					height: 35px;
+ 					outline: none;
+ 				}
+
+ 				#tabel2{
+ 		
+          width: 1310px;
+ 				}
+
+ 				#poza{
+ 					width: 100px;
+ 					text-align:center;
+ 				}
+
+ 				#descriere{
+ 					width: 800px;
+ 					text-align:left;
+          padding-left: 40px;
+ 				
+ 				}
+
+ 				#tdDetalii{
+ 
+ 					text-align:center;
+ 				}
+
+        img{
+            width:130px;
+            height: 130px;
+        }
+

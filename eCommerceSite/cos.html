@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SuNeTlaPatrat</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+							
+
+							
+
+
+	body{
+		background-color: #ffffff;
+		margin: 0px;
+		padding: 0px;
+	}
+	.wrapper {
+		margin:0 auto;
+		max-width: 1389px;
+		justify-content: center;  
+	}
+	.top{
+		display: grid;
+		grid-template-columns: 1389px;
+		grid-template-rows: 150px;
+		text-align: center;
+		background-color: #ffffff;
+		position: fixed;
+		border-bottom: 1px solid black;
+		z-index:2;
+	}
+	.grid-item1 {
+		text-align:left;
+		border-right: none;
+		position: fixed;
+		z-index: 8;
+	}
+	.grid-item2 {
+		text-align:left;
+		border-right: none;
+		border-left: none;
+		position: fixed;
+		margin-left: 435px;
+		z-index: 3;
+	}
+
+	.grid-item3 {
+		border-left: none;
+		position: fixed;
+		
+	}
+
+	.grid-item4 {
+		border-left: none;
+		position: fixed;
+		margin-left: 1100px;
+		margin-top: 5px;
+		z-index:1;
+	}
+
+	.i{
+		width: 30px;
+		height: 30px;
+		margin-top: 100px;
+		z-index:1;
+		cursor:pointer;
+	}
+
+
+	#sunet {
+		position: absolute;
+		width: 240px;
+		height: 130px;
+		margin-left: 115px;
+		margin-top: 1px;
+		z-index:3;		
+	}
+
+	#unde {
+		position: absolute;
+		width: 150px;
+		height: 110px;
+		padding-left: 130px;
+		padding-top: 15px;
+
+	}
+
+	#carucior {
+		position: absolute;
+		width: 65px;
+		height: 60px;
+		margin-left: 1259px;
+		margin-top: 65px;
+		z-index:-2;
+
+	}
+
+	#numarProduse {
+		background-color: #ffbffb;
+		width: 27px;
+		height: 31px;
+		margin-left: 1287px;
+		margin-top: 55px;
+		z-index:4;
+		text-align: center;
+		border-radius:10px;
+		font-weight: bold;
+		font-size: 21px;
+		visibility: hidden;
+		outline: none;
+		cursor: pointer;
+	}
+
+	#paginaDeProduse{
+		height: 40px;
+		font-size: 15px;
+		color:black;
+		background-color: white;
+		border-radius: 10px;
+		outline: none;
+		margin-top: 20px;
+		margin-left: 1020px;
+	}
+	#paginaDeProduse:hover {
+		border: 3px solid black;
+	}
+	.gridContainer{
+		display: grid;
+		grid-template-columns: 190px 200px 160px 170px 60px;
+		width: 790px;
+		grid-template-rows: 30px;
+		grid-auto-rows: 100px;
+		text-align: center;
+		background-color: #ffffff;
+		padding-left: 70px;
+
+	}
+	.cell {
+		padding-top: 5px;
+		background-color: #000000;
+		color: #ffffff;
+	}
+	.cell1 {
+		border: 1px solid black;
+		padding-top: 10px;
+	}
+	.cell2 {
+		border: 1px solid black;
+		padding-top: 38px;
+		font-size: 18px;
+		font-family: "Lucida Console", Monaco, monospace;	
+		text-align:center;
+	}
+
+	.cell0 {
+		border: 1px solid black;
+		padding-top: 38px;
+		font-size: 18px;
+		font-family: "Lucida Console", Monaco, monospace;	
+		text-align:center;
+	}
+
+	.cell4 {
+		border: 1px solid black;
+		padding-top: 38px;
+		font-size: 18px;
+		font-family: "Lucida Console", Monaco, monospace;	
+		text-align:center;
+	}
+	.cell3 {
+		border: 1px solid black;
+		padding-top: 33px;
+		font-size: 18px;
+		font-family: "Lucida Console", Monaco, monospace;	
+		text-align:center;
+		
+	}
+	.casti{
+		width: 80px;
+		height: 85px;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.x:hover {
+		color: red;
+		text-decoration: underline;
+	}
+	.produs:hover {
+		color: blue;
+		text-decoration: underline;
+	}
+	#nu {
+		text-align: center;
+		font-size: 25px;
+		padding-left: 350px;
+		padding-top: 50px;
+		display: block;
+		width: 500px;
+	}
+	.total{
+		margin-left: 1020px;
+
+	}
+	#total{
+		margin-top: 20px;
+		font-family: "Lucida Console", Monaco, monospace;
+	}
+	.total2{
+		margin-left: 1020px;
+		margin-top:20px;
+		background-color: white;
+		font-weight: bold;
+		height: 50px;
+		outline: none;
+		border: 7px solid black;
+		font-size: 15px;
+		font-family: "Lucida Console", Monaco, monospace;
+		box-sizing: border-box;
+		position: relative;
+		transition: all 500ms ease; 
+	}
+	.total2:before {
+		content:'';   
+		position: absolute;  
+		top: 0px;
+		left: 0px;
+		width: 0px;
+		height: 36px;
+		background: green;
+		transition: all 1s ease;
+	} 
+	.total2:hover:before {
+		width: 100%;
+		opacity: 0.5;
+	}
+
+	.total3{
+		margin-left: 1020px;
+		margin-top:20px;
+		background-color: white;
+		font-weight: bold;
+		height: 50px;
+		outline: none;
+		border: 7px solid black;
+		font-size: 15px;
+		font-family: "Lucida Console", Monaco, monospace;
+		box-sizing: border-box;
+		position: relative;
+		transition: all 500ms ease; 
+	}
+	.total3:before {
+		content:'';   
+		position: absolute;  
+		top: 0px;
+		left: 0px;
+		width: 0px;
+		height: 36px;
+		background: red;
+		transition: all 1s ease;
+	} 
+	.total3:hover:before {
+		width: 100%;
+		opacity: 0.5;
+	}
+	.tva {
+		font-size: 14px;
+	}
+	.produseStoc {
+		color: white;
+		font-size: 12.5px;
+		font-weight: bold;
+		background-color: red;
+		padding: 3px;
+		position: relative;
+		display:none;
+	}
+
+
+	.cant .fas{
+		cursor:pointer;
+		position:absolute;
+		margin-left:-15px;
+		margin-top:1px;
+		padding:4px;
+		border-left:1px solid #e2e2e0;
+		border-right:1px solid #e2e2e0;
+	}
+
+
+	.plus_minus {
+		width: 20px;
+		height: 20px;
+		text-align:center;
+		transform: scale(1.1);
+		margin-left:10px;
+		border:0px;
+		font-size:15px;
+		font-family: "Lucida Console", Monaco, monospace;
+		
+	}
+
+	.cant{
+		margin-right:35px;
+		margin-left:30px;
+		padding-left:10px;
+		padding-right:0px;
+	}
+
+
+							@media only screen and (max-width: 425px) {
+
+
+							body{
+								background-color: #ffffff;
+								margin: 0px;
+							
+							}
+
+							.wrapper {
+								  margin:0 auto;
+								  max-width: 425px;  
+								  text-align: center;
+								  justify-content: center;
+								  background-color: white;
+								}
+
+							.top{
+								display: grid;
+								grid-template-columns: 321px;
+								grid-template-rows: 95px;
+								text-align: center;
+								background-color: #ffffff;
+								position:fixed;
+								z-index:3;
+								border-bottom:7px solid black;
+								height: 95px;
+							}
+
+							.grid-item1 {
+							
+							}
+
+							.grid-item2 {
+								border-right: none;
+								border-left: none;
+								padding-bottom: 0px;
+								margin-top:5px;
+								margin-left: -90px;
+								padding-left:0px;
+								z-index:4;
+							}
+
+							.grid-item3 {
+								border-left: none;	
+								margin-left:200px;
+								margin-top:40px;
+								z-index:-2;	
+							}
+
+							.grid-item4 {
+								display:none;
+							}
+							
+								.i{
+									border:1px solid white;
+									
+								}
+
+
+								#sunet {
+									position: absolute;
+									width: 160px;
+									height:88px;
+									padding-top: 0px;
+
+								}
+
+								#unde {
+									display:none;
+
+								}
+
+								#carucior {
+									position: absolute;
+									width: 18px;
+									height: 13px;
+									padding-bottom: 25px;
+									padding-left:25px;
+									transform: scale(0.7);
+									margin-top:3px;
+									z-index:-1;
+									background-color: white;
+									margin-left: 6px; 
+
+								}
+
+								
+
+								#numarProduse {
+									background-color: #ffbffb;
+									width: 19px;
+									height: 14px;
+									margin-left: 46px; 
+									margin-top:3px;
+									z-index:2;
+									text-align: center;
+									border-radius:6px;
+									font-weight: bold;
+									font-size: 17px;
+									visibility: hidden;
+									outline: none;
+									position:relative;
+									padding:3px;
+									border: 2px solid black;
+								}
+
+								.gridContainer{
+									display: grid;
+									grid-template-columns: 200px 100px;
+									width: 300px;
+									grid-template-rows: 65px;
+									grid-auto-rows: 65px;
+									text-align: center;
+									background-color: #ffffff;
+									padding-left: 3px;
+									margin-top: 60px;
+
+								}
+
+
+								#imagineC{
+									
+									display:none;
+								}
+								#produsC{
+									
+									display:none;
+								}
+								#cantitateC{
+									
+									display:none;
+								}
+								#pretC{
+									
+									display:none;
+								}
+								#eliminaC{
+									
+									display:none;
+								}
+								.cell {
+									padding-top: 5px;
+									background-color: #000000;
+									color: #ffffff;
+
+								}
+								.cell1 {
+									display:none;
+								
+								}
+								.cell2 {
+									
+									padding-top: 18px;
+									font-family: "Lucida Console", Monaco, monospace;
+									font-size: 20px;
+									font-weight:bold;	
+									text-align:center;
+									background-color: #ffbffb;
+								}
+
+								.cell0 {
+									
+									padding-top: 18px;
+									font-family: "Lucida Console", Monaco, monospace;
+									font-size: 20px;
+									font-weight:bold;	
+									text-align:center;
+									background-color: none;
+								}
+
+								.cell4 {
+									
+									padding-top: 18px;
+									font-family: "Lucida Console", Monaco, monospace;
+									font-size: 20px;
+									font-weight:bold;	
+									text-align:center;
+									
+								}
+								.cell3 {
+									
+									padding-top: 15px;
+									font-size: 18px;
+									font-family: "Lucida Console", Monaco, monospace;	
+									text-align:center;
+									
+								}
+								
+
+								.produseStoc {
+									color: white;
+									font-size: 12.5px;
+									font-weight: bold;
+									background-color: red;
+									padding: 3px;
+									position: relative;
+									display:none;
+								}
+
+
+								.cant .fas{
+									cursor:pointer;
+									position:absolute;
+									margin-left:-16px;
+									margin-top:1px;
+									padding:5px;
+									border-left:1px solid #e2e2e0;
+									border-right:1px solid #e2e2e0;
+								}
+
+								.cant{
+									transform: scale(1.3);
+
+								}
+
+
+								.plus_minus {
+									width: 20px;
+									height: 20px;
+									text-align:center;
+									transform: scale(1.1);
+									margin-left:10px;
+									border:0px;
+									font-size:15px;
+									font-family: "Lucida Console", Monaco, monospace;
+									
+								}
+
+								#paginaDeProduse{
+									display:none;
+								}
+
+								.x{
+									color:red;
+									background-color: none;
+								}
+
+								.total2{
+									
+									background-color: #71f79e;
+									font-weight: bold;
+									height: 50px;
+									outline: none;
+									border: 7px solid black;
+									font-size: 15px;
+									font-family: "Lucida Console", Monaco, monospace;
+									box-sizing: border-box;
+									position: relative;
+									transition: all 500ms ease; 
+								}
+
+								#cash{
+									position:absolute;
+									margin-top: -75px;
+									margin-left: -110px;
+								}
+
+								.total3{
+									background-color: white;
+									font-weight: bold;
+									height: 50px;
+									outline: none;
+									border: 7px solid black;
+									font-size: 15px;
+									font-family: "Lucida Console", Monaco, monospace;
+									box-sizing: border-box;
+									position: relative;
+									transition: all 500ms ease; 
+								}
+
+								#total1{
+									position:absolute;
+									margin-top: -130px;
+									margin-left: 90px;
+								}
+
+								.tva {
+									font-size: 14px;
+								}
+
+								.total{
+									
+								}
+								#total{
+									position:absolute;
+									margin-top: -170px;
+									margin-left: 35px;
+									font-family: "Lucida Console", Monaco, monospace;
+								}
+
+								.total2:before {
+									display:none;
+								} 
+								.total2:hover:before {
+									display:none;
+								}
+							}
+
+
+</style>
+<script>
+
+	function deseneazaGrid() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				listaProduse= JSON.parse(this.responseText);
+				console.log(listaProduse);
+				if(repeat()){
+					return;
+				}
+				cart();
+
+
+				var grid=document.querySelector(".gridContainer");
+				var str=`<div class="gridContainer">
+				<div class="cell" id="imagineC">Imagine</div>
+				<div class="cell" id="produsC">Produs</div>
+				<div class="cell" id="pretC">Pret</div>
+				<div class="cell" id="cantitateC">Cantitate</div>
+				<div class="cell" id="eliminaC">Elimina</div>`
+
+				if (listaProduse) {
+					for(var i in listaProduse){
+						var rand = `<div class="cell1" id="${i}C"><img class="casti" src="${listaProduse[i].imagine}" /></div>
+						<div class="cell2" id="${i}D"><a href="#" class="produs" id="${i}" onclick="back('${i}')">${listaProduse[i].produs}</a></div>
+						<div id="${i}F" class="cell0">${listaProduse[i].pret}</div>
+						<div class="cell3" id="${i}E">
+						<div class="cant">
+						<i class="fas fa-plus fa-xs" onclick="plus('${i}')"></i>
+						<input type="text" class="plus_minus" id="${i}A" value="${listaProduse[i].cantitate}" onchange="edit('${i}')" onkeypress="cheie('${i}',event)" />&nbsp;&nbsp;
+						<i class="fas fa-minus fa-xs" onclick="minus('${i}')"></i>
+						</div>
+						<span id="${i}B" class="produseStoc">Produse pe stoc: 10</span>
+						</div>
+						<div class="cell4"  id="${i}G"><a href="#" class="x" onclick="elimina('${i}')"><i class="fas fa-trash-alt"></i></a></div>`
+						str+=rand;
+
+					}
+					console.log(str);
+					grid.innerHTML=str;
+					total();
+				}else{
+					var str= "";
+					var rand = `<div id="nu">Nu ati selectat nici un produs.</div>`
+					document.getElementById("total").style.display="none";
+					document.querySelector(".total2").style.display="none";
+					document.getElementById("total1").style.display="none";
+					str+=rand;
+					console.log(str);
+					grid.innerHTML=str;
+				}
+				stoc();
+				style();
+
+			}
+		};
+		xhttp.open("GET", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+		xhttp.send();
+
+
+	}
+
+	function cheie(index,e) {
+
+		for(var i in listaProduse){
+
+			var editare=document.getElementById(""+index+"A").value;
+			var max_caractere=1;
+
+			if(e.key >= 1 && e.key <= 9 && editare.length < max_caractere) {
+
+			}else {
+				e.preventDefault();
+
+			}
+		}
+	}
+
+	function plus(index) {
+
+		if(listaProduse[index].cantitate < 15){
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+
+					deseneazaGrid();
+				}
+			}
+			xhttp.open("PUT", "https://coscumparaturi-90c56.firebaseio.com/"+index+"/cantitate.json", true);
+			xhttp.send(JSON.stringify(listaProduse[index].cantitate+1));
+		}
+	}
+
+	function minus(index) {
+
+		if(listaProduse[index].cantitate>1){
+
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+
+					deseneazaGrid();	  
+				}
+			}
+			xhttp.open("PUT", "https://coscumparaturi-90c56.firebaseio.com/"+index+"/cantitate.json", true);
+			xhttp.send(JSON.stringify(listaProduse[index].cantitate-1));
+		}
+	}
+
+	function stoc() {
+
+		for(var j in listaProduse){
+
+			if(listaProduse[j].cantitate > 10) {
+				document.querySelector("#"+j+"B").style.display="block";
+
+			}else{
+				document.querySelector("#"+j+"B").style.display="none";
+
+			}
+		}
+
+	}
+
+	function style(){
+
+		var continua = document.getElementById("cash");
+
+		var plata=true;
+
+		for(var i in listaProduse){
+			if(listaProduse[i].cantitate > 10 ){
+				plata=false;
+				break;
+			}
+		}
+
+		if (plata === false){
+			continua.classList.remove("total2");	
+			continua.classList.add("total3");
+
+		}else{
+			continua.classList.remove("total3");	
+			continua.classList.add("total2");
+			continua.innerHTML="Continua cu plata";
+		}
+	}
+	function cart() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var element_count = 0;
+				for(var i in listaProduse){
+					if(listaProduse.hasOwnProperty(i)){
+						element_count += Number(listaProduse[i].cantitate);
+					}    
+				}
+				document.getElementById("numarProduse").style.visibility="visible";
+				document.getElementById("numarProduse").value= element_count;
+			}
+		}
+
+		xhttp.open("GET", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+		xhttp.send();
+	}
+	function elimina(index){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				deseneazaGrid();
+			}
+		}
+
+		xhttp.open("DELETE", "https://coscumparaturi-90c56.firebaseio.com/"+index+".json", true);
+		xhttp.send();
+
+	}
+	function back(index){
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+
+				var listaProduse = JSON.parse(this.responseText);
+				console.log(listaProduse);
+				var produs=document.getElementById(""+index+"").innerHTML;
+				for(var i in listaProduse){
+					if (produs===listaProduse[i].nume) {
+						index=i;
+						console.log(produs);
+					}
+					window.location = "details.html?id="+index+"";
+
+				}
+			}
+		}
+
+		xhttp.open("GET", "https://proiect-ecommerce.firebaseio.com/.json", true);
+		xhttp.send();
+	}
+	function total() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var total = 0;
+				var bucati = 0;
+				for(var i in listaProduse){
+
+					total = parseInt(listaProduse[i].pret) * Number(listaProduse[i].cantitate);
+					bucati += total;
+				}
+				bucati = bucati + 0.19*bucati;
+				document.getElementById("total1").innerHTML=bucati.toFixed(1)+"$";
+			}
+		}
+
+		xhttp.open("GET", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+		xhttp.send();
+
+	}
+	function edit(index) {
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+
+				listaProduse = JSON.parse(this.responseText);
+				console.log(listaProduse);	
+				deseneazaGrid();	  
+			}
+		}
+		xhttp.open("PUT", "https://coscumparaturi-90c56.firebaseio.com/"+index+"/cantitate.json", true);
+		xhttp.send(JSON.stringify(parseInt(document.getElementById(""+index+"A").value)));
+	}
+	function repeat() {
+		var changed=false;
+		for(var i in listaProduse){
+			for(var j in listaProduse){
+				if (i < j && listaProduse[i].index === listaProduse[j].index) {
+					listaProduse[i].cantitate += listaProduse[j].cantitate;
+
+					listaProduse[j].cantitate=0;
+					changed=true;
+
+				}
+			}
+		}
+		if(changed){
+			for(var i in listaProduse){
+				if(listaProduse[i].cantitate===0){
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+
+						}
+					}
+
+					xhttp.open("DELETE", "https://coscumparaturi-90c56.firebaseio.com/"+i+".json", true);
+					xhttp.send();
+
+				}else{
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+						}
+					}
+					xhttp.open("PUT", "https://coscumparaturi-90c56.firebaseio.com/"+i+"/cantitate.json", true);
+					xhttp.send(JSON.stringify(listaProduse[i].cantitate));
+				}
+			}
+			deseneazaGrid();
+		}
+		return changed;
+
+	}
+	function continuaPlata() {
+
+		var plata=true;
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				for(var i in listaProduse){
+					if(listaProduse[i].cantitate > 10 ){
+						plata=false;
+						break;
+
+					}
+				}
+
+				if (plata !== false){
+					window.location="comandaFinalizata.html";
+				}
+			}
+		}
+
+
+		xhttp.open("GET", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+		xhttp.send();
+
+	}
+
+	function continuaPlata2() {
+
+		var plata=true;
+		var continua = document.getElementById("cash");
+		for(var i in listaProduse){
+			if(listaProduse[i].cantitate > 10 ){
+				plata=false;
+				break;
+
+			}
+		}
+
+		if (plata === false){
+			continua.innerHTML="Stoc Insuficient!";
+		}else{
+
+		}
+
+	}
+
+		function openInNewTab(url) {
+			  var win = window.open(url, '_blank');
+			  win.focus();
+			}
+
+</script>
+</head>
+
+<body onload="deseneazaGrid()">
+	<div class="wrapper">
+		<div class="top">
+			<div class="grid-item1"><img id="unde" src="wave.png" /></div>
+			<div class="grid-item2"><a href="proiect.html"><img id="sunet" src="sunet.jpg" /></a></div>
+			<div class="grid-item3">
+				<a href="cos.html">
+					<i id="carucior" class="fas fa-shopping-cart fa-4x"></i>
+					<input type="text" id="numarProduse" value="0"></input>
+				</a>
+			</div><br /><br /><br /><br /><br />
+			<div class="grid-item4"><span onclick="openInNewTab('https://www.instagram.com/lendmeurears.au/');"><img class="i" src="fi-instagram.png" /></span>&nbsp;&nbsp;<span onclick="openInNewTab('https://www.facebook.com/lendmeurearsaustralia/')"><img class="i" src="fi-facebook.png" /></span>&nbsp;&nbsp;<span onclick="openInNewTab('https://twitter.com/hifiheadphones');"><img class="i" src="fi-tumblr.png" /></span></div>
+		</div><br /><br /><br /><br /><br /><br /><br /><br />
+		<a href="proiect.html"><button id="paginaDeProduse"><i class="fas fa-arrow-left">&nbsp;&nbsp;Inapoi la pagina de produse</i></button></a><br />
+		<div class="gridContainer">
+		</div>
+		<h1 class="total" id="total">Total<span class="tva">(include TVA)</span>:</h1>
+		<h1 class="total" id="total1"></h1>
+		<button class="total2" id="cash" onclick="continuaPlata()" onmouseover="continuaPlata2()" >Continua cu plata</button>
+	</div>
+</body>
+</html>

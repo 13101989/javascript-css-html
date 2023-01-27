@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detalii produs</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+							
+	body{
+		background-color: #ffffff;
+		margin: 0px;
+		padding: 0px;
+
+	}
+
+	.wrapper {
+		margin:0 auto;
+		max-width: 1389px;
+		justify-content: center;  
+	}
+
+	.containerImagine{
+		display: grid;
+		grid-template-columns: 680px 320px;
+		grid-template-rows: 60px 422px 100px;
+		grid-row-gap: 10px;
+		grid-column-gap: 40px;
+		text-align: center;
+		background-color: #ffffff;
+		justify-content: center;
+		border-left: 122px solid black;
+		border-right: 119px solid black;
+
+	}
+
+	.grid{
+		border: 5px solid black;
+	}
+
+	.containerImagine div:nth-child(1) {
+		grid-column: 1 / span 2;
+		text-align: left;
+		padding-left: 240px;
+		border: none;	
+	}
+
+	.containerImagine div:nth-child(4) {
+		grid-column: 1 / span 2;
+	}
+
+	.containerImagine div:nth-child(3) {
+		border: none;
+	}
+
+
+	#imagine{
+		width: 450px;
+		height: 412px;		
+	}
+
+	#nume{
+		font-family: "Comic Sans MS", cursive, sans-serif;
+	}
+
+
+	#descriere{
+		font-family: Tahoma, Geneva, sans-serif;
+		text-align: left;
+		padding: 15px;
+		font-weight: 500;
+	}
+
+																									.produse_cantitate {
+																										font-family: "Comic Sans MS", cursive, sans-serif;
+
+																									}
+
+
+																									#plus_minus {
+																										width: 35px;
+																										height: 25px;
+																										text-align: center;
+																										font-size:16px;
+																										font-family: "Comic Sans MS", cursive, sans-serif;
+
+																									
+																									}
+
+																									.produse_cantitate .fas{
+																										padding:8px;
+																										margin:0px;
+																										border-left:1px solid #e2e2e0;
+																										border-right:1px solid #e2e2e0;
+																										cursor:pointer;
+																										
+																									}
+
+																									
+
+
+	#pret{
+		color: black;
+		font-weight: 900;
+		font-size: 38px;
+		font-family: "Comic Sans MS", cursive, sans-serif;	
+		margin-top: 55px;	
+	}
+
+	#butonCos {
+		height: 90px;
+		width: 120px;
+		background-color: #ffffff;
+		color:#000000;
+		cursor: pointer;
+		font-weight: 500;
+		font-size: 18px;
+		margin-top: 20px;
+		border-radius: 5px;
+		position: relative;
+		overflow:hidden;
+		box-shadow: 3px 5px 11px #000;
+		outline: none;
+		z-index:1;
+
+	}
+
+	#butonCos:hover {
+		border: 3px solid black;
+	}
+
+	#paginaDeProduse{
+		height: 40px;
+		font-size: 15px;
+		color:black;
+		background-color: white;
+		border-radius: 10px;
+		outline: none;
+
+
+	}
+
+	#paginaDeProduse:hover {
+		border: 3px solid black;
+
+	}
+
+
+	#bandaCos {
+		position: fixed;
+		margin-top: -143px;
+		display: none;
+		color: #ffffff;
+		background-color: #000000;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		text-align: center;
+		padding-top: 5px;
+		height: 30px;
+		border-bottom: 1px solid black;
+		width: 1389px;
+		box-shadow: 3px 5px 11px #000;
+		z-index:9;
+	}
+
+
+	.top{
+		display: grid;
+		grid-template-columns: 1389px;
+		grid-template-rows: 150px;
+		text-align: center;
+		background-color: #ffffff;
+		position: fixed;
+		border-bottom: 1px solid black;
+		z-index:2;
+	}
+
+	.grid-item1 {
+		text-align:left;
+		border-right: none;
+		position: fixed;
+		z-index: 8;
+	}
+
+	.grid-item2 {
+		text-align:left;
+		border-right: none;
+		border-left: none;
+		position: fixed;
+		margin-left: 435px;
+		z-index: 3;
+	}
+
+	.grid-item3 {
+		border-left: none;
+		position: fixed;
+	
+	}
+
+	.grid-item4 {
+		border-left: none;
+		position: fixed;
+		margin-left: 1100px;
+		margin-top: 5px;
+		z-index:1;
+	}
+
+	.i{
+		width: 30px;
+		height: 30px;
+		margin-top: 100px;
+		z-index:1;
+		cursor:pointer;
+	}
+
+
+	#sunet {
+		position: absolute;
+		width: 240px;
+		height: 130px;
+		margin-left: 115px;
+		margin-top: 1px;
+		z-index:3;		
+	}
+
+	#unde {
+		position: absolute;
+		width: 150px;
+		height: 110px;
+		padding-left: 130px;
+		padding-top: 15px;
+
+	}
+
+	#carucior {
+		position: absolute;
+		width: 65px;
+		height: 60px;
+		margin-left: 1259px;
+		margin-top: 65px;
+		z-index:-2;
+
+	}
+
+	#numarProduse {
+		background-color: #ffbffb;
+		width: 27px;
+		height: 31px;
+		margin-left: 1287px;
+		margin-top: 55px;
+		z-index:4;
+		text-align: center;
+		border-radius:10px;
+		font-weight: bold;
+		font-size: 21px;
+		visibility: hidden;
+		outline: none;
+		cursor: pointer;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+						@media only screen and (max-width: 425px) {
+
+
+							body{
+								background-color: #ffffff;
+								margin: 0px;
+							
+							}
+
+							.wrapper {
+								  margin:0 auto;
+								  max-width: 425px;  
+								  text-align: center;
+								  justify-content: center;
+								  background-color: white;
+								}
+
+							.top{
+								display: grid;
+								grid-template-columns: 321px;
+								grid-template-rows: 95px;
+								text-align: center;
+								background-color: #ffffff;
+								position:fixed;
+								z-index:3;
+								border-bottom:7px solid black;
+								height: 95px;
+							}
+
+							.grid-item1 {
+							
+							}
+
+							.grid-item2 {
+								border-right: none;
+								border-left: none;
+								padding-bottom: 0px;
+								margin-top:5px;
+								margin-left: -90px;
+								padding-left:0px;
+								z-index:2;
+							}
+
+							.grid-item3 {
+								border-left: none;	
+								margin-left:200px;
+								margin-top:40px;
+								z-index:1;	
+							}
+
+							.grid-item4 {
+								display:none;
+							}
+							
+								.i{
+									border:1px solid white;
+									
+								}
+
+
+								#sunet {
+									position: absolute;
+									width: 160px;
+									height:88px;
+									padding-top: 0px;
+
+								}
+
+								#unde {
+									display:none;
+
+								}
+
+								#carucior {
+									position: absolute;
+									width: 18px;
+									height: 13px;
+									padding-bottom: 25px;
+									padding-left:25px;
+									transform: scale(0.7);
+									margin-top:3px;
+									z-index:-1;
+									background-color: white;
+									margin-left: 6px; 
+
+								}
+
+								
+
+								#numarProduse {
+									background-color: #ffbffb;
+									width: 19px;
+									height: 14px;
+									margin-left: 46px; 
+									margin-top:3px;
+									z-index:2;
+									text-align: center;
+									border-radius:6px;
+									font-weight: bold;
+									font-size: 17px;
+									visibility: hidden;
+									outline: none;
+									position:relative;
+									padding:3px;
+									border: 2px solid black;
+								}
+
+								
+
+								#bandaCos {
+									position: fixed;
+									margin-top: -160px;
+									display: none;
+									color: #ffffff;
+									background-color: #000000;
+									text-align: center;
+									padding-top: 2px;
+									height: 52px;
+									border-bottom: 1px solid black;
+									width: 316px;
+									box-shadow: 3px 5px 11px #000;
+									z-index:4;
+									font-family: "Lucida Console", Monaco, monospace;
+									margin-left:1px;
+									margin-right:3px;
+								}
+
+								.containerImagine{
+									display: grid;
+									grid-template-columns: 320px;
+									grid-template-rows: 7px 320px 320px 200px;
+									text-align: center;
+									justify-content: center;
+									z-index:-1;
+									grid-row-gap: 0px;
+									
+									
+									background-color: #ffffff;
+
+								}
+
+								.grid{
+								
+									background-color: #ffffff;
+								}
+
+
+							.containerImagine div:nth-child(1) {
+									grid-column: 1 / span 1;
+									text-align: center;
+									padding: 0px;
+									border: none;
+									z-index:1;	
+									margin-top:-48px;
+									font-size: 12px;
+									margin-left: -2px;
+
+								}
+
+								.containerImagine div:nth-child(4) {
+									grid-column: 1 / span 1;
+								}
+
+								.containerImagine div:nth-child(3) {
+									border-right: 1px solid black;
+								}
+								
+								#imagine{
+									width: 250px;
+									height: 300px;		
+								}
+
+								#nume{
+									font-family: "Lucida Console", Monaco, monospace;
+								}
+
+
+								#descriere{
+									font-family: Tahoma, Geneva, sans-serif;
+									text-align: left;
+									padding: 15px;
+									font-weight: 500;
+									
+								}
+
+								#pret{
+									color: black;
+									font-weight: 900;
+									font-size: 47px;
+									font-family: "Lucida Console", Monaco, monospace;
+									margin-top: 25px;	
+									padding-bottom:20px;
+								}
+
+								#butonCos {
+									height: 90px;
+									width: 120px;
+									transform: scale(0.85);
+									background-color: #ffffff;
+									color:#000000;
+									cursor: pointer;
+									font-weight: 500;
+									font-size: 18px;
+									margin-top: -20px;
+									border-radius: 5px;
+									position: relative;
+									overflow:hidden;
+									box-shadow: 3px 5px 11px #000;
+									outline: none;
+									z-index:1;
+
+								}
+
+								#butonCos:hover {
+									border: 3px solid black;
+								}
+
+								#paginaDeProduse{
+									margin-top:5px;
+									height: 40px;
+									font-size: 15px;
+									color:black;
+									background-color: white;
+									border-radius: 10px;
+									outline: none;
+									display:none;
+								}
+
+								#paginaDeProduse:hover {
+									border: 3px solid black;
+
+								}
+
+								.produse_cantitate {
+									font-family: "Lucida Console", Monaco, monospace;
+
+								}
+
+
+								#plus_minus {
+									width: 35px;
+									height: 25px;
+									text-align: center;
+									font-size:16px;
+									font-family: "Lucida Console", Monaco, monospace;
+
+																										
+								}
+
+								.produse_cantitate .fas{
+									padding:12px;
+									margin:0px;
+									border-left:1px solid #e2e2e0;
+									border-right:1px solid #e2e2e0;
+									cursor:pointer;
+																											
+								}
+
+							}
+										
+</style>
+<script>
+
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+
+			var detalii = JSON.parse(this.responseText);
+			console.log(detalii);
+
+			document.getElementById("nume").innerHTML = detalii.nume;
+			document.getElementById("imagine").src = detalii.imagine;
+			document.getElementById("descriere").innerHTML = detalii.descriere;
+			document.getElementById("pret").innerHTML = detalii.pret+"$";
+			document.getElementById("produsePeStoc").innerHTML = detalii.stoc;
+		}
+	}
+	var id = window.location.search.substring(4);
+	xhttp.open("GET", "https://proiect-ecommerce.firebaseio.com/"+ id +".json", true);
+	xhttp.send();
+
+	function cart() {
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+
+				listaProduse= JSON.parse(this.responseText);
+
+				var element_count = 0;
+
+				for(var i in listaProduse){
+					if(listaProduse.hasOwnProperty(i)){
+						element_count += Number(listaProduse[i].cantitate);
+					}    
+				}
+
+				if (element_count != 0)	{
+
+					document.getElementById("numarProduse").style.visibility="visible";
+					document.getElementById("numarProduse").value= element_count;
+
+				}}
+			}
+
+			xhttp.open("GET", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+			xhttp.send();
+
+		}
+
+
+		function bandaCos(form,event) {
+
+			event.preventDefault();
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+
+					listaProduse = JSON.parse(this.responseText);
+					console.log(listaProduse);	
+					cart();	 
+
+
+				}
+			}
+
+			xhttp.open("POST", "https://coscumparaturi-90c56.firebaseio.com/.json", true);
+			xhttp.send(JSON.stringify({
+				imagine: document.getElementById("imagine").src,
+				produs: document.getElementById("nume").innerHTML,
+				cantitate: parseInt(document.getElementById("plus_minus").value),
+				pret: document.getElementById("pret").innerHTML,
+				index: window.location.search.substring(4),
+			}));
+
+			document.getElementById("product").innerHTML = document.getElementById("nume").innerHTML;
+			document.getElementById("bandaCos").style.display = "block";
+
+
+
+			setTimeout(function revenire () {
+				document.getElementById("bandaCos").style.display = "none";
+			}, 2000);		
+		}
+
+			var total=1;
+
+		function plus() {
+
+			if(total<10){
+			total++;
+			document.getElementById("plus_minus").value=total;
+			}
+		}
+
+		function minus() {
+			
+			if(total>1){
+			total--;
+			document.getElementById("plus_minus").value=total;
+			}
+		}
+
+		function cheie(cantitate,e) {
+
+		var editare=document.getElementById("plus_minus").value;
+		var max_caractere=1;
+
+		if(e.key >= 1 && e.key <= 9 && editare.length < max_caractere) {
+			total=e.key;
+		}else {
+			e.preventDefault();
+			
+		}
+	}
+
+			function openInNewTab(url) {
+			  	var win = window.open(url, '_blank');
+			  	win.focus();
+			}
+
+
+	</script>
+</head>
+
+<body onload="cart()">
+	<div class="wrapper">
+		<div class="top">
+			<div class="grid-item1"><img id="unde" src="wave.png" /></div>
+			<div class="grid-item2"><a href="proiect.html"><img id="sunet" src="sunet.jpg" /></a></div>
+			<div class="grid-item3">
+				<a href="cos.html">
+					<i id="carucior" class="fas fa-shopping-cart fa-4x"></i>
+					<input type="text" id="numarProduse" value="0"></input>
+				</a>
+			</div><br /><br /><br /><br /><br />
+			<div class="grid-item4"><span onclick="openInNewTab('https://www.instagram.com/lendmeurears.au/');"><img class="i" src="fi-instagram.png" /></span>&nbsp;&nbsp;<span onclick="openInNewTab('https://www.facebook.com/lendmeurearsaustralia/')"><img class="i" src="fi-facebook.png" /></span>&nbsp;&nbsp;<span onclick="openInNewTab('https://twitter.com/hifiheadphones');"><img class="i" src="fi-tumblr.png" /></span></div>
+		</div><br /><br /><br /><br /><br /><br /><br /><br />
+		<div id="bandaCos"><span id="product"></span> a fost adaugat cu succes in cosul tau de cumparaturi!</div>
+		<div class="containerImagine">
+			<div class="grid"><h1 id="nume"></h1></div>
+			<div class="grid"><img id="imagine" src="" /></div>
+			<div class="grid">
+				<a href="proiect.html"><button id="paginaDeProduse"><i class="fas fa-arrow-left">&nbsp;&nbsp;Inapoi la pagina de produse</i></button></a><br /><br /><br />
+				<button id="butonCos" onclick="bandaCos(this,event)"><i id="awesome" class="fas fa-cart-plus fa-3x"></i></button><br /><br /><br />
+				<div class="produse_cantitate">Produse pe stoc: <span id="produsePeStoc"></span></div><br />
+				<div class="produse_cantitate" id="cantitate">Cantitate:&nbsp;
+					<i class="fas fa-plus fa-xs" id="plus" onclick="plus()"></i>
+					<input type="text" id="plus_minus" value="1" onkeypress="cheie(this,event)" />
+					<i class="fas fa-minus fa-xs" id="minus" onclick="minus()"></i>
+				</div>
+				<div id="pret"></div>
+			</div>
+			<div class="grid" id="descriere"></div>
+		</div>
+	</body>
+	</html>

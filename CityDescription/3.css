@@ -1,0 +1,87 @@
+		body{
+				background-image: url("stema.png");
+				background-position: center;
+				background-size: 160px 200px;
+				background-repeat: no-repeat;
+				background-color: #8af7f3;
+				background-repeat: no-repeat;
+				}
+				table{
+					border-spacing: 30px;
+					margin-left: 25px;
+					margin-top:25px;
+					padding:0px;
+				}
+				.butoane{
+					width:600px;
+					height:250px;		
+					display: block;
+					outline:0;
+					
+				}
+				#istorie {
+				cursor: pointer;	
+				border-radius: 0px 0px 225px 0px;
+				border: none;
+				box-shadow: 8px 10px 18px red;
+				
+				}
+				#istorie:hover {background-color: #2930e8}
+
+				#istorie:active {
+ 				background-color: #8afc99;
+  				box-shadow: 2px 4px red;
+  				transform: translateY(10px);
+				}
+	
+
+				#transport{
+					cursor: pointer;
+					border-radius: 0px 170px 0px 0px;
+					border: none;
+					box-shadow: 5px 10px 18px red;
+				}
+				#transport:hover {background-color: #2930e8}
+
+				#transport:active {
+ 				background-color: #8afc99;
+  				box-shadow: 2px 4px red;
+  				transform: translateY(10px);
+  				}
+
+				#ceas{
+					cursor: pointer;
+					border-radius: 0px 0px 0px 170px;
+					border: none;
+					box-shadow: 5px 10px 18px red;
+				}
+				#ceas:hover {background-color: #2930e8}
+
+				#ceas:active {
+ 				background-color: #8afc99;
+  				box-shadow: 2px 4px red;
+  				transform: translateY(10px);
+  				}
+
+				#demo{
+					cursor: pointer;
+					border-radius: 120px 0px 0px 0px;
+					border: none;
+					box-shadow: 5px 10px 18px red;
+				}
+				#demo:hover {background-color: #2930e8}
+
+				#demo:active {
+ 				background-color: #8afc99;
+  				box-shadow: 2px 4px red;
+  				transform: translateY(10px);
+  				}
+
+				#sursa a{
+					line-height: 0px;
+					color: #ff0f4f;
+				}
+				footer{
+					margin: 0px 0px 0px 1265px;
+
+				}

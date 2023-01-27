@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+		Lista
+		</title>
+                <style>
+                table{
+                    border-collapse:collapse;
+                }
+
+                .asc{
+                    background-color: red;
+                }
+                .desc {
+                    background-color: blue;
+                }
+               
+                 </style>
+                 <script>
+                    var listaClienti=[
+                        {
+                            nume:"Damache",
+                            prenume:"Valentin",
+                            varsta:28,
+                            telefon:["0742166528"]
+                        },
+                        {
+                            nume:"Damache1",
+                            prenume:"Avalentin1",
+                            varsta:29,
+                            telefon:["0742166529"]
+                        },
+                        {
+                            nume:"Adamache2",
+                            prenume:"Valentin2",
+                            varsta:30,
+                            telefon:["0742166530"]
+                        }
+                    ];
+
+                   
+
+                    function drawClienti() {
+                        var tabel=document.querySelector("#listaClienti tbody");
+                        var str="";
+                        for (var i=0; i<listaClienti.length;i++) {
+                            //listaClienti[i].nume
+                            //listaClienti[i].prenume
+                            //listaClienti[i].varsta
+                            //listaClienti[i].telefon
+                            
+                            var rand = `<tr>
+                                        <td>${listaClienti[i].nume}</td>
+                                        <td>${listaClienti[i].prenume}</td>
+                                        <td>${listaClienti[i].varsta}</td>
+                                        <td>${listaClienti[i].telefon}</td>
+                                        <td><input type="button" value="sterge-ma" onclick="stergeRand(this)" /></td>
+                                        <td><input type="button" value="editeaza-ma" id="input" onclick="editeaza(this)" /></td>
+                                        </tr>`
+                            
+                            str += rand;
+                            
+                            }
+                        
+
+                        console.log(str);
+                        tabel.innerHTML=str;
+                    }
+
+                     function stergeRand(rand) {
+                
+                            var s = rand.parentNode.parentNode.rowIndex;
+                            document.getElementById("listaClienti").deleteRow(s);
+                            
+                            listaClienti.splice(s-1,1);
+
+                            console.log(listaClienti);
+    
+                    }
+
+
+
+                    var coloanaSortare="";
+                    var directieSortare="asc";
+
+                    function sorteaza(coloana, td) {
+                        var lastElem = document.querySelector(".asc, .desc");
+                        if (lastElem!==null) {
+                            lastElem.classList.remove("asc");
+                            lastElem.classList.remove("desc");
+                        }
+                        if (coloanaSortare!==coloana){
+                            coloanaSortare=coloana;
+                            directieSortare="asc";
+                        }else if (directieSortare==="asc"){
+                            directieSortare="desc";
+                        }else {directieSortare="asc";
+                    }
+
+                        listaClienti.sort(function(a,b){
+                            if (a[coloana]>b[coloana]){
+                                return 1; 
+                            }else if (a[coloana]<b[coloana]){
+                                    return -1;
+                                }else {
+                                    return 0;
+                                }
+                        });
+
+                        if (directieSortare==="desc") {
+                            listaClienti.reverse();
+                         }
+
+                        console.log(listaClienti);
+                        drawClienti();
+                        td.classList.add(directieSortare);
+                    }
+
+                    function validare(formular, e) {
+                        var tabel=document.querySelector("#listaClienti tbody");
+                        
+                        var nume=document.getElementById("nume");
+                        var prenume=document.getElementById("prenume");
+                        var varsta=document.getElementById("varsta");
+                        var telefon=document.getElementById("telefon");
+                        
+
+                        for (var i=0; i<nume.value.length; i++)
+                        for (var j=0; j<prenume.value.length; j++)
+                        for (var k=0; k<varsta.value.length; k++)
+                        for (var l=0; l<telefon.value.length; l++)
+                        if ((nume.value[i] >="a" && nume.value[i] <="z" || nume.value[i] >="A" && nume.value[i] <="Z") && (prenume.value[j] >="a" && prenume.value[j] <="z" || prenume.value[j] >="A" && prenume.value[j] <="Z") && varsta.value[k] >= 0 && varsta.value[k] <= 9 && telefon.value[l] >= 0 && telefon.value[l] <= 9) {
+                        
+                            e.preventDefault();}
+                            
+                            
+                            var randNou=tabel.insertRow(0);
+                            var cell0=randNou.insertCell(0);
+                            var cell1=randNou.insertCell(1);
+                            var cell2=randNou.insertCell(2);
+                            var cell3=randNou.insertCell(3);
+                            var cell4=randNou.insertCell(4);
+                            var cell5=randNou.insertCell(5);
+
+
+                            cell0.innerHTML=nume.value;
+                            cell1.innerHTML=prenume.value;
+                            cell2.innerHTML=varsta.value;
+                            cell3.innerHTML=telefon.value;
+                            cell4.innerHTML=`<input type="button" value="sterge-ma" onclick="stergeRand(this)" />`; 
+                            cell5.innerHTML=`<input type="button" value="editeaza-ma" id="input" onclick="editeaza(this)" />`;
+
+                             nume.value="";
+                             prenume.value="";
+                             varsta.value="";
+                             telefon.value="";
+
+                            var nume = cell0.innerHTML;
+                            var prenume = cell1.innerHTML;
+                            var varsta = +cell2.innerHTML;
+                            var telefon = [cell3.innerHTML]; 
+
+                           
+                          listaClienti.unshift({nume, prenume, varsta, telefon}); 
+
+
+                             console.log(listaClienti);                 
+
+                }
+
+
+                    function editeaza(rand) {
+                        
+                        var s = rand.parentNode.parentNode.rowIndex;
+
+                        var n = listaClienti[s-1].nume;
+                        var p = listaClienti[s-1].prenume;
+                        var v = listaClienti[s-1].varsta;
+                        var t = listaClienti[s-1].telefon;
+
+                        document.getElementsByTagName("input")[0].value=n;
+                        document.getElementsByTagName("input")[1].value=p;
+                        document.getElementsByTagName("input")[2].value=v;
+                        document.getElementsByTagName("input")[3].value=t;
+                        
+                        document.getElementById("listaClienti").deleteRow(s);   
+                        listaClienti.splice(s-1,1);
+                        console.log(listaClienti);
+                    
+                    }
+
+                
+
+                    
+                 </script>      
+	</head>
+	<body onload="drawClienti();">
+        <form onsubmit="validare(this, event);" id="formular">
+            <fieldset>
+                 <legend>User nou</legend>
+                 <label for="nume">Nume</label>
+                 <input type="text" id="nume" /><br />
+                 <label for="prenume">Prenume</label>
+                 <input type="text" id="prenume" /><br />
+                 <label for="varsta">Varsta</label>
+                 <input type="text" id="varsta" /><br />
+                 <label for="telefon">Telefon</label>
+                 <input type="text" id="telefon" /><br /><br />
+                 <input type="submit" id="trimite" value="Validare" /><br />
+            </fieldset><br /><br />
+        </form>
+		<table border="1" id="listaClienti">
+        <thead>
+        	<tr>
+        		<td onclick="sorteaza('nume', this)">Nume</td>
+        		<td onclick="sorteaza('prenume', this)">Prenume</td>
+        		<td onclick="sorteaza('varsta')">Varsta</td>
+                <td>Telefon</td>
+                <td style="background-color:black"></td>
+                <td style="background-color:black"></td>
+        	</tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+		</table>
+	</body>
+</html>

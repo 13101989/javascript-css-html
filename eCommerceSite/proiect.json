@@ -1,0 +1,86 @@
+[
+        {
+            "nume": "HIFIMan RE-400",
+            "imagine": "hifiman.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "49"
+        },
+        {
+            "nume": "Yamaha EPH-100SL",
+            "imagine": "yamaha.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "125"
+        },
+        {
+            "nume": "Westone W20",
+            "imagine": "westoneW20.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "299"
+        },
+        {
+            "nume": "Dunu DN-1000",
+            "imagine": "dunudn1000.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "158"
+        },
+        {
+            "nume": "Brainwavz B2",
+            "imagine": "b.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "119"
+        },
+        {
+            "nume": "Vsonic VSD5S",
+            "imagine": "vsd5s_.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "64"
+        },
+        {
+            "nume": "Vsonic GR07 Bass",
+            "imagine": "vsonic_gr07.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "120"
+        },
+		{
+            "nume": "1MORE Triple Driver",
+            "imagine": "1more.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "99"
+        },
+		{
+            "nume": "Shure SE215",
+            "imagine": "shure.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "99"
+        },
+		{
+            "nume": "EarSonics SM64",
+            "imagine": "earsonics.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "299"
+        },
+		{
+            "nume": "RHA T10i",
+            "imagine": "rhat10.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "144"
+        },
+		{
+            "nume": "V-Moda Zn",
+            "imagine": "V-Moda_Zn.jpg",
+            "descriere": "O experienta Hi-Res ce implica tehnologie revolutionara, design si inginerie acustica pentru a oferi cel mai bun sunet posibil! Toate acestea sunt secondate de un confort sporit datorita formei ergonomice si suportului dupa ureche.",
+            "stoc": "10",
+			"pret": "175"
+        }	
+ ]

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title> ajax - weather app </title>
+
+		<style>
+			body {
+				background-color: #c9f2ec;
+			}
+
+			#container {
+
+				display: grid;
+				grid-template-columns: 300px 900px;
+				padding-bottom: 20px;
+			}
+
+			.containerPrognoza {
+				display: grid;
+  				grid-template-columns: 170px 170px 170px 170px 170px 170px;
+  				grid-auto-flow: column;
+  				grid-template-rows: repeat(9, auto);
+				grid-column-gap:10px;
+				grid-row-gap:20px;
+				text-align: center;
+				padding-left: 35px;
+				padding-right: 35px;
+			}
+
+			.containerPrognoza div:nth-child(1) {
+   				grid-column: 1 / 1;
+  				grid-row: 1 / 1;
+			}
+
+			.containerPrognoza div:nth-child(2) {
+   				grid-column: 2 / 2;
+  				grid-row: 1 / 1;
+			}
+
+			.containerPrognoza div:nth-child(3) {
+   				grid-column: 3 / 3;
+  				grid-row: 1 / 1;
+			}
+
+			.containerPrognoza div:nth-child(4) {
+   				grid-column: 4 / 4;
+  				grid-row: 1 / 1;
+			}
+
+			.containerPrognoza div:nth-child(5) {
+   				grid-column: 5 / 5;
+  				grid-row: 1 / 1;
+			}
+
+			.containerPrognoza div:nth-child(6) {
+   				grid-column: 6 / 6;
+  				grid-row: 1 / 1;
+			}
+
+		
+
+			.zi{
+				font-size: 13px;
+				background-color: #92d2ef;
+			}
+
+			.itemPrognoza{
+				list-style-type: none;
+				font-weight: normal;
+				font-size: 12px;
+				font-family: Arial, Helvetica, sans-serif;
+				
+
+			}
+
+			.item{
+				text-align: left;
+
+			}
+
+			#oras {
+				padding: 8px 7px;
+				width: 800px;
+			}
+
+			#afiseazaVremea{
+				background-color: #3c82f2;
+				color: white;
+				padding: 9px 18px;
+				border-radius: 10px;
+				outline: none;
+			}
+
+			#afiseazaPrognoza{
+				background-color: #3c82f2;
+				color: white;
+				padding: 9px 18px;
+				border-radius: 10px;
+				outline: none;
+			}
+
+			#div1{
+				background-color: white;
+				width: 1200px;
+				height: 50px;
+				padding-top: 18px;
+				padding-left: 30px;
+				padding-right: 40px;
+				padding-top: 14px;
+				margin-left: 40px;
+				margin-right: 40px;
+			}
+
+			#div2 {
+				background-color: white;
+				width: 1200px;
+				padding-top: 18px;
+				padding-left: 30px;
+				padding-right: 40px;
+				padding-top: 30px;
+				margin-left: 40px;
+				margin-right: 40px;
+				font-size: 17px;
+				font-weight: bold;
+			}
+
+			#div3 {
+				background-color: white;
+				width: 1200px;
+				padding-left: 30px;
+				padding-right: 40px;
+				padding-top: 30px;
+				margin-left: 40px;
+				margin-right: 40px;
+				font-size: 17px;
+				font-weight: bold;
+
+			}
+
+			#vremeaAcum {
+				font-size: 13px;
+				list-style-type: none;
+				font-weight: normal;
+				padding-left: 10px;
+				padding-bottom: 30px;
+				font-family: Arial, Helvetica, sans-serif;
+
+			}
+
+			 #map {
+
+        height: 200px;
+
+       		}
+
+		</style>
+
+		<script>
+
+			function afisareVreme (orasel, e){
+
+				var	orase=document.getElementsByTagName("input")[0].value;
+				var url= "https://api.openweathermap.org/data/2.5/weather?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q="+orase;
+      			
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var vreme1 = JSON.parse(this.responseText);
+					console.log(vreme1);
+
+
+					var str="";
+
+						str = `<li><span class="icon">&nbsp;<img src=http://openweathermap.org/img/w/${vreme1.weather[0].icon}.png></span></li>
+								<li>Descriere:&nbsp;${vreme1.weather[0].description}</li>
+								<li>Umiditate:&nbsp;${vreme1.main.humidity}</li>
+								<li>Presiune:&nbsp;${vreme1.main.pressure}</li>
+								<li>Temperatura curenta:&nbsp;${vreme1.main.temp}</li>
+								<li>Minima zilei:&nbsp;${vreme1.main.temp_min}</li>
+								<li>Maxima zilei:&nbsp;${vreme1.main.temp_max}</li>`
+					
+					document.getElementById("vremeaAcum").innerHTML=str;
+
+					var lat=vreme1.coord.lat;
+					var lon=vreme1.coord.lon;
+
+        			var uluru = {lat: lat, lng: lon};
+        			var map = new google.maps.Map(document.getElementById('map'), {
+          			zoom: 10,
+          			center: uluru
+       			 });
+        				var marker = new google.maps.Marker({
+          				position: uluru,
+          					map: map
+        			});
+					}
+				}
+			xhttp.open("GET", url);
+			xhttp.send();
+			}
+
+			function afisarePrognoza (prognoza, e){
+
+				var	orase=document.getElementsByTagName("input")[0].value;
+				var url= "https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q="+orase;
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var prognoza = JSON.parse(this.responseText);
+					console.log(prognoza);
+
+					var today = new Date();
+					var todayString = today.getDate()+ "/" + ((today.getMonth()+1<10)?"0":"") + (today.getMonth()+1) + "/" + today.getFullYear();
+
+					var today1 = new Date(today.getTime()+24*60*60*1000);
+					var today1String = today1.getDate()+ "/" + ((today1.getMonth()+1<10)?"0":"") + (today1.getMonth()+1) + "/" + today1.getFullYear();
+
+					var today2 = new Date(today1.getTime()+24*60*60*1000);
+					var today2String = today2.getDate()+ "/" + ((today2.getMonth()+1<10)?"0":"") + (today2.getMonth()+1) + "/" + today2.getFullYear();
+
+					var today3 = new Date(today2.getTime()+24*60*60*1000);
+					var today3String = today3.getDate()+ "/" + ((today3.getMonth()+1<10)?"0":"") + (today3.getMonth()+1) + "/" + today3.getFullYear();
+
+					var today4 = new Date(today3.getTime()+24*60*60*1000);
+					var today4String = today4.getDate()+ "/" + ((today4.getMonth()+1<10)?"0":"") + (today4.getMonth()+1) + "/" + today4.getFullYear();
+
+					var today5 = new Date(today4.getTime()+24*60*60*1000);
+					var today5String = today5.getDate()+ "/" + ((today5.getMonth()+1<10)?"0":"") + (today5.getMonth()+1) + "/" + today5.getFullYear();
+
+					
+					
+					 str1= `<div class="containerPrognoza">
+									<div class="zi">Ziua: ${todayString}</div>
+									<div class="zi">Ziua: ${today1String}</div>
+									<div class="zi">Ziua: ${today2String}</div>
+									<div class="zi">Ziua: ${today3String}</div>
+									<div class="zi">Ziua: ${today4String}</div>
+									<div class="zi">Ziua: ${today5String}</div>
+									`
+					
+					var zi = prognoza.list[0].dt_txt[11] + prognoza.list[0].dt_txt[12];
+
+					       if (parseInt(zi) === 03) {
+					 	str1 += `<div class="item"></div>`
+					 }else if (parseInt(zi) === 06){
+					 	str1 += `<div class="item"></div>
+					 			<div class="item"></div>`
+					 }else if (parseInt(zi) === 09){
+					 	str1 += `<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>`
+					 }else if (parseInt(zi) === 12){
+					 	str1 += `<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>`
+					 }else if (parseInt(zi) === 15){
+					 	str1 += `<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>`
+					 }else if (parseInt(zi) === 18){
+					 	str1 += `<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>`
+					 }else if (parseInt(zi) === 21){
+					 	str1 += `<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>
+					 			<div class="item"></div>`
+					 }
+					 
+
+
+ 					 for(var i in prognoza.list){
+					 for(var j in prognoza.list[i].weather){
+
+					 
+					 var ora = prognoza.list[i].dt_txt[11] + prognoza.list[i].dt_txt[12] + prognoza.list[i].dt_txt[13] + prognoza.list[i].dt_txt[14] + prognoza.list[i].dt_txt[15];
+					 
+
+					str1 += `	<div class="item">
+									<ul class="itemPrognoza">
+										<li style="padding-left:15px"><img src=http://openweathermap.org/img/w/${prognoza.list[i].weather[j].icon}.png></li>
+										<li>Ora: ${ora}</li>
+										<li>Temperatura: ${prognoza.list[i].main.temp}</li>
+										<li>Descriere: ${prognoza.list[i].weather[j].description}</li>
+									</ul>
+								</div>
+							`
+							
+						}}
+
+						
+					document.querySelector(".containerPrognoza").innerHTML=str1;
+
+
+				}}
+			xhttp.open("GET", url);
+			xhttp.send();
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="div1"><input type="text" id="oras" placeholder="Please insert city name in english : e.g. London"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input onclick="afisareVreme(this, event)"  type="button" id="afiseazaVremea" value="Afiseaza vremea" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input onclick="afisarePrognoza(this, event)" type="button" id="afiseazaPrognoza" value="Afiseaza prognoza" /></div><br />
+		<div id="div2">Vremea acum<hr /><br />
+			<div id="container">
+				<div>
+					<ul id="vremeaAcum"></ul>
+		    	</div>
+				<div id="map"></div>
+			</div>
+		</div><br />
+		<div id="div3">Vremea in urmatoarele zile<hr /><br />
+			<div class="containerPrognoza"></div>
+	</div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1rgOEy_UXI4ONHiDd63wb8ZxoFCEpLFQ">
+    </script>
+	</body>
+</html>

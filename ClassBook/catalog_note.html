@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Catalog_Note</title>
+		<link rel="stylesheet" type="text/css" href="catalog_note.css">
+		<script src="catalog_note.js"></script>
+	</head>
+	<body class="body">
+	<div class="grid">
+		<div id="lista_elevi_wrapper"><br />
+			<h2>Lista elevi</h2>
+			<form method="post" onsubmit="adaugaElev(this, event)">
+				<fieldset class="numeElev">
+					<label for="numeElev">Nume:</label>
+					<input type="text" id="numeElev" />
+					<input type="submit" value="Adauga elev"  />
+				</fieldset>
+			</form>
+				<fieldset class="numeElev">
+					<a href="#" class="link" onclick="sorteazaAsc()">Sorteaza ascendent dupa medie note</a><br />
+					<a href="#" class="link" onclick="sorteazaDesc()">Sorteaza desscendent dupa medie note</a>
+					<table class="tabel" id="tabelE"><br />
+						<td class="tabel2">Nici un elev adaugat</td>
+					</table>
+				</fieldset>
+		</div>
+		<div id="note_elevi_wrapper"></div>
+	</div>
+	</body>
+</html>

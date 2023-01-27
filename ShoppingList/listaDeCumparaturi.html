@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Lista de cumparaturi</title>
+		<link rel="stylesheet" type="text/css" href="listaDeCumparaturi.css">
+		<script src="listaDeCumparaturi.js"></script>
+	</head>
+	<body>
+		<form onsubmit="validare(this, event)" onload="deseneazaLista()">
+			<fieldset><br /><br />
+				<h2>SHOPPING LIST</h2><br />
+				<input type="text" id="item" />
+				<input type="submit" id="addItem" value="Add item" /><br /><br />
+				<input type="button" id="sortAsc" value="Sort asc" onclick="sorteazaAsc ()" />
+				<input type="button" id="sortDesc" value="Sort desc" onclick="sorteazaDesc ()" /><br /><br />
+				<table id="tabel">
+					<thead>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+
+	</body>
+</html>
